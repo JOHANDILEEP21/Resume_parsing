@@ -7,3 +7,4 @@ pdfplumber
 plotly
 spacy
 gensim
+pyLDAvis
