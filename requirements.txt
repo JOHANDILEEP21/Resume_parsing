@@ -2,6 +2,3 @@ streamlit
 streamlit_authenticator
 streamlit_option_menu
 nltk
-pickle
-sklearn
-/home/adminuser/venv/bin/python -m pip install --upgrade pip
