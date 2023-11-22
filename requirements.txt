@@ -6,3 +6,4 @@ PyPDF2
 pdfplumber
 plotly
 spacy
+gensim
