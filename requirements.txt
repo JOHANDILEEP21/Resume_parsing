@@ -5,3 +5,6 @@ nltk
 PyPDF2
 pdfplumber
 plotly
+pickle
+spacy
+gensim
