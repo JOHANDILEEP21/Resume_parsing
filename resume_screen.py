@@ -33,7 +33,7 @@ import locale
 locale.getpreferredencoding = lambda: "UTF-8"
 import resume
 
-#nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_lg")
 
 ruler = nlp.add_pipe("entity_ruler")
 skill_pattern_path = r"C:\Users\johan\OneDrive\Desktop\DS Python\StreamLit\Employee_Moniter\jz_skill_patterns.jsonl"
