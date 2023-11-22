@@ -3,4 +3,4 @@ streamlit_authenticator
 streamlit_option_menu
 nltk
 PyPDF2
-
+pdfplumber
