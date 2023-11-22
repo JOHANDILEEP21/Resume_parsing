@@ -4,3 +4,4 @@ streamlit_option_menu
 nltk
 pickle
 sklearn
+/home/adminuser/venv/bin/python -m pip install --upgrade pip
