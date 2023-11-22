@@ -4,3 +4,4 @@ streamlit_option_menu
 nltk
 PyPDF2
 pdfplumber
+plotly
