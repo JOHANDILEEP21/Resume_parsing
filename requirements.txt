@@ -9,3 +9,4 @@ spacy
 gensim
 pyLDAvis
 jsonlines
+spacy.load("en_core_web_lg")
