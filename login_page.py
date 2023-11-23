@@ -15,7 +15,7 @@ import models
 
 def model():
     try:
-        df = pd.read_csv(r'C:\Users\johan\OneDrive\Desktop\DS Python\Excel file\UpdatedResumeDataSet.csv')
+        df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
 
         df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
 
