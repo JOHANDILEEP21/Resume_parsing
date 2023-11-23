@@ -46,8 +46,8 @@ def main(md):
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
             st.write(uce)
 
-        clf = md
-        #clf = pickle.load(open('clf.pkl', 'rb'))
+        #clf = md
+        clf = pickle.load(open('https://drive.google.com/file/d/1yxxaa_BYAvWaytJPbNWqZYfy8iYZCldY/view?usp=sharing', 'rb'))
         tfidf = pickle.load(open('tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
