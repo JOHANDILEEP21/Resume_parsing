@@ -32,7 +32,7 @@ def extract_data(feed):
     return data
 
 # web app
-def main():  # md):
+def main(md):
     #st.title("Resume Screening App")
     uploaded_file = st.file_uploader('Upload Resume', type='pdf')
     
@@ -48,17 +48,7 @@ def main():  # md):
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
             st.write(uce)
 
-        #clf = md
-        # URL of the pickle file on GitHub
-        url = 'https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl'
-        
-        # Download the pickle file
-        response = requests.get(url)
-        
-        # Load the pickle file from the content
-        clf = pickle.load(open(url))
-
-        #clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
+        clf = md
         tfidf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
