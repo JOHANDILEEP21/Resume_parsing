@@ -42,7 +42,7 @@ def model():
         # clf = pickle.load(open('clf.pkl', 'rb'))
         #st.write([tfidf, clf])
 
-        return clf, tfidf
+        return clf
     
     except Exception as e:
         st.text(e)
