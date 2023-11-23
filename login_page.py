@@ -13,7 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 import models
 
-def model():
+def ml_model():
     try:
         df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
 
@@ -58,7 +58,7 @@ def login_page(credentials, Authenticator, username, usernames):
         # Now you can use the columns to add content
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
-        md = model()
+        md = ml_model()
         start = st.checkbox('Click here to start')
         if start:
             res = resume.resume_parsing(md)
