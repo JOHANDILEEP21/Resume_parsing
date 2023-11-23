@@ -8,7 +8,7 @@ import sqlite3
 # signup = st.button('SignIn')
 
 def insert_user(email, username, password):
-    with sqlite3.connect('user_db.db') as conn:
+    with sqlite3.connect('https://github.com/JOHANDILEEP21/Resume_parsing/blob/d22045305aa1d8eab6ed082916126a796fe00970/user_db.db') as conn:
         cursor = conn.cursor()
         try:
             conn.execute("BEGIN")
