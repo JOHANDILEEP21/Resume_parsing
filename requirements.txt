@@ -1,6 +1,9 @@
+spacy>=3.0.0,<4.0.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz#egg=en_core_web_sm
+stylecloud==0.5.1
+en_core_web_sm==3.0.0
 --upgrade pip
 spacy-nightly
-spacy==3.2.0
 streamlit
 streamlit_authenticator
 streamlit_option_menu
