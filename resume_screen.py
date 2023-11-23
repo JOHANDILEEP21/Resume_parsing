@@ -24,7 +24,6 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import spacy.en_core_web_sm
 
 nltk.download(['stopwords','wordnet', 'punkt'])
 nltk.download("en_core_web_lg")
@@ -36,6 +35,8 @@ locale.getpreferredencoding = lambda: "UTF-8"
 import resume
 import spacy.cli
 from spacy.pipeline.entity_ruler import EntityRuler
+
+import en_core_web_sm
 
 nlp = en_core_web_.load()
 # Create an EntityRuler
