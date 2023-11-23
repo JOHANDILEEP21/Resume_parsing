@@ -25,8 +25,11 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-nltk.download(['stopwords','wordnet', 'punkt'])
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt')
 nltk.download("en_core_web_lg")
+nltk.download('en_core_web_sm')
 #warning
 import warnings
 warnings.filterwarnings('ignore')
@@ -38,9 +41,9 @@ from spacy.pipeline.entity_ruler import EntityRuler
 
 spacy.cli.download("en_core_web_sm")
 
-import en_core_web_sm
+#import en_core_web_sm
 
-nlp = en_core_web_.load()
+nlp = en_core_web_sm.load()
 # Create an EntityRuler
 ruler = EntityRuler(nlp)
 
