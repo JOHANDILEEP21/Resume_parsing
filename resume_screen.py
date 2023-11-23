@@ -24,7 +24,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-nltk.download(['stopwords','wordnet'])
+nltk.download(['stopwords','wordnet', 'punkt'])
 nltk.download("en_core_web_lg")
 #warning
 import warnings
@@ -32,8 +32,11 @@ warnings.filterwarnings('ignore')
 import locale
 locale.getpreferredencoding = lambda: "UTF-8"
 import resume
-
 import spacy.cli
+from spacy.pipeline.entity_ruler import EntityRuler
+
+# Create an EntityRuler
+ruler = EntityRuler(nltk)
 
 # # Download spaCy model if not already downloaded
 # try:
@@ -44,7 +47,7 @@ import spacy.cli
 
 #nlp = spacy.load("en_core_web_lg")
 
-ruler = nltk.add_pipe("entity_ruler")
+nltk.add_pipe(ruler)
 skill_pattern_path = r"https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/jz_skill_patterns.jsonl"
 ruler.from_disk(skill_pattern_path)
 nltk.pipe_names
