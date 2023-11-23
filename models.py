@@ -30,7 +30,7 @@ def extract_data(feed):
     return data
 
 # web app
-def main(): #md):
+def main(md):
     #st.title("Resume Screening App")
     uploaded_file = st.file_uploader('Upload Resume', type='pdf')
     
@@ -45,8 +45,10 @@ def main(): #md):
             # If UTF-8 decoding fails, try decoding with 'latin-1'
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
             st.write(UnicodeDecodeError)
-        clf = pickle.load(open('clf.pkl', 'rb'))
-        tfidf = pickle.load(open('tfidf.pkl', 'rb'))
+
+        tfidf, clf = md
+        #clf = pickle.load(open('clf.pkl', 'rb'))
+        #tfidf = pickle.load(open('tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
         cleaned_resume = str(cleaned_resume)
