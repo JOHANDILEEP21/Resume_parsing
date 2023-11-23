@@ -35,11 +35,11 @@ import resume
 
 import spacy.cli
 
-# Download spaCy model if not already downloaded
-try:
-    nlp = spacy.load("en_core_web_lg")
-except OSError:
-    spacy.cli.download("en_core_web_lg")
+# # Download spaCy model if not already downloaded
+# try:
+#     nlp = spacy.load("en_core_web_lg")
+# except OSError:
+#     spacy.cli.download("en_core_web_lg")
     #nlp = spacy.load("en_core_web_lg")
 
 #nlp = spacy.load("en_core_web_lg")
