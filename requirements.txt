@@ -1,5 +1,4 @@
 spacy==3.2.0
-en-core-web-lg
 streamlit
 streamlit_authenticator
 streamlit_option_menu
