@@ -35,7 +35,7 @@ def extract_data(feed):
 def main(md):
     try:
         #st.title("Resume Screening App")
-        uploaded_file = st.file_uploader('Upload Resume', type='pdf')
+        uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf'])
         st.text(type(uploaded_file))
         if uploaded_file is not None:
             try:
@@ -94,9 +94,9 @@ def main(md):
             st.write("Predicted Category:", category_name)
             
             return cleaned_resume, True
-        else:
-            st.text('Error in this function')
+        # else:
+        #     st.text('Error in this function')
 
     except Exception as e:
-        st.text(e)
+        st.warning(e)
 
