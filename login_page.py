@@ -63,7 +63,7 @@ def login_page(credentials, Authenticator, username, usernames):
     #st.write(md)
     start = st.checkbox('Click here to start')
     if start:
-        df = pd.read_csv('UpdatedResumeDataSet.csv', error_bad_lines=False)
+        df = pd.read_csv('UpdatedResumeDataSet.csv')
         st.dataframe(df)
     
         df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
