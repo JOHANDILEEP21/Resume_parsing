@@ -36,7 +36,7 @@ def main(md):
     try:
         #st.title("Resume Screening App")
         uploaded_file = st.file_uploader('Upload Resume', type='pdf')
-        st.text(uploaded_file)
+        st.text(type(uploaded_file))
         if uploaded_file is not None:
             try:
                 df = extract_data(uploaded_file)
