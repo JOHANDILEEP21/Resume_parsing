@@ -91,4 +91,6 @@ def main():  # md):
         st.write("Predicted Category:", category_name)
         
         return cleaned_resume, True
+    else:
+        st.text('Error in this function')
 
