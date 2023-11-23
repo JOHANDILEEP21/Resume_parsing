@@ -48,9 +48,9 @@ def main(md):
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
             st.write(uce)
 
-        clf = md
+        clf, tfidf = md
         #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
-        tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
+        #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
         
         cleaned_resume = clean_resume(df)
         cleaned_resume = str(cleaned_resume)
