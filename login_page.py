@@ -59,7 +59,7 @@ def login_page(credentials, Authenticator, username, usernames):
         # Now you can use the columns to add content
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
-        # md = ml_model()
+        md = ml_model()
         #st.write(md)
         start = st.checkbox('Click here to start')
         if start:
