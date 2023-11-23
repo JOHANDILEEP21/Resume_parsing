@@ -3,7 +3,7 @@ import streamlit_authenticator as stauth
 from signup import fetch_users
 #from linear_regression import linear_models
 import login_page
-from login_page import model
+from login_page import ml_model
 
 def main_page():
     try:
