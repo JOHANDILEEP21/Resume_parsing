@@ -21,15 +21,15 @@ def main_page():
 
         for index in range(len(emails)):
             credentials['usernames'][usernames[index]] = {'name':emails[index], 'password':passwords[index]}
-        st.write(credentials)
+        #st.write(credentials)
 
         Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit',key='abcdef', cookie_expiry_days=4)
-        st.write(Authenticator)
+        # st.write(Authenticator)
 
         email, authentication_status, username, = Authenticator.login(':green[Login]', 'main')
         
         info, info1 = st.columns(2)
-        
+        st.text(username)
         if username:
             if username in usernames:
                 if authentication_status:
