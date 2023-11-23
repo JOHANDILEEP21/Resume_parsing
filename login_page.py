@@ -63,7 +63,7 @@ def login_page(credentials, Authenticator, username, usernames):
         #st.write(md)
         start = st.checkbox('Click here to start')
         if start:
-            res = resume.resume_parsing(clf, tfidf)
+            res = resume.resume_parsing(md)
             res
         else:
             st.write('Please upload dataset for model training purposes')
