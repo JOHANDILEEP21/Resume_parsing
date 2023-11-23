@@ -13,40 +13,40 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 import models
 
-def ml_model():
-    #try:
-    df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
-    st.dataframe(df)
+# def ml_model():
+#try:
+# df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
+# st.dataframe(df)
 
-    df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
+# df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
 
-    le = LabelEncoder()
-    le.fit(df['Category'])
-    df['Category'] = le.transform(df['Category'])
-    st.dataframe(df)
+# le = LabelEncoder()
+# le.fit(df['Category'])
+# df['Category'] = le.transform(df['Category'])
+# st.dataframe(df)
 
-    tfidf = TfidfVectorizer(stop_words='english')
-    tfidf = tfidf.fit(df['Resume'])
-    requredTaxt  = tfidf.transform(df['Resume'])
-    #st.write(requredTaxt)
-    X_train, X_test, y_train, y_test = train_test_split(requredTaxt, df['Category'], test_size=0.2, random_state=42)
+# tfidf = TfidfVectorizer(stop_words='english')
+# tfidf = tfidf.fit(df['Resume'])
+# requredTaxt  = tfidf.transform(df['Resume'])
+# #st.write(requredTaxt)
+# X_train, X_test, y_train, y_test = train_test_split(requredTaxt, df['Category'], test_size=0.2, random_state=42)
 
-    clf = OneVsRestClassifier(KNeighborsClassifier())
-    clf = clf.fit(X_train,y_train)
-    ypred = clf.predict(X_test)
-    #st.write(accuracy_score(y_test,ypred))
+# clf = OneVsRestClassifier(KNeighborsClassifier())
+# clf = clf.fit(X_train,y_train)
+# ypred = clf.predict(X_test)
+# #st.write(accuracy_score(y_test,ypred))
 
-    pickle.dump(tfidf,open('tfidf.pkl','wb'))
-    pickle.dump(clf, open('clf.pkl', 'wb'))
-    
-    # Load the trained classifier
-    # clf = pickle.load(open('clf.pkl', 'rb'))
-    st.write([tfidf, clf])
+# pickle.dump(tfidf,open('tfidf.pkl','wb'))
+# pickle.dump(clf, open('clf.pkl', 'wb'))
 
-    return clf, tfidf
-    
-    # except Exception as e:
-    #     st.warning(f'Ingetha error{e}')
+# # Load the trained classifier
+# # clf = pickle.load(open('clf.pkl', 'rb'))
+# st.write([tfidf, clf])
+
+# return clf, tfidf
+
+# except Exception as e:
+#     st.warning(f'Ingetha error{e}')
 
 def login_page(credentials, Authenticator, username, usernames):
     st.title(':red[UniJack]')
@@ -59,11 +59,40 @@ def login_page(credentials, Authenticator, username, usernames):
         # Now you can use the columns to add content
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
-        md = ml_model()
-        st.write(md)
+        # md = ml_model()
+        #st.write(md)
         start = st.checkbox('Click here to start')
         if start:
-            res = resume.resume_parsing(md)
+            df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
+            st.dataframe(df)
+        
+            df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
+        
+            le = LabelEncoder()
+            le.fit(df['Category'])
+            df['Category'] = le.transform(df['Category'])
+            st.dataframe(df)
+        
+            tfidf = TfidfVectorizer(stop_words='english')
+            tfidf = tfidf.fit(df['Resume'])
+            requredTaxt  = tfidf.transform(df['Resume'])
+            #st.write(requredTaxt)
+            X_train, X_test, y_train, y_test = train_test_split(requredTaxt, df['Category'], test_size=0.2, random_state=42)
+        
+            clf = OneVsRestClassifier(KNeighborsClassifier())
+            clf = clf.fit(X_train,y_train)
+            ypred = clf.predict(X_test)
+            #st.write(accuracy_score(y_test,ypred))
+        
+            pickle.dump(tfidf,open('tfidf.pkl','wb'))
+            pickle.dump(clf, open('clf.pkl', 'wb'))
+            
+            # Load the trained classifier
+            # clf = pickle.load(open('clf.pkl', 'rb'))
+            st.write([tfidf, clf])
+        
+            # return clf, tfidf
+            res = resume.resume_parsing(clf, tfidf)
             res
         else:
             st.write('Please upload dataset for model training purposes')
