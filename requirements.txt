@@ -1,6 +1,6 @@
 streamlit
 spacy
-spacy download en_core_web_sm
+nltk.download('en_core_web_sm')
 streamlit_authenticator
 streamlit_option_menu
 nltk
