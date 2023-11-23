@@ -10,14 +10,14 @@ import plotly.express as px
 import models
 import resume_screen
 
-def resume_parsing(clf, tfidf):
+def resume_parsing(md):
     try:
         pos = []
         position = st.text_input("Applying Position")
         pos.append(position)
         #st.text(pos)
 
-        mdl = models.main(clf, tfidf)
+        mdl = models.main(md)
         #st.write(mdl)
 
         resume_text, mdd = mdl
