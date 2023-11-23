@@ -44,7 +44,7 @@ def main(md):
         except UnicodeDecodeError:
             # If UTF-8 decoding fails, try decoding with 'latin-1'
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
-            st.write(UnicodeDecodeError)
+            #st.write(UnicodeDecodeError)
 
         tfidf, clf = md
         #clf = pickle.load(open('clf.pkl', 'rb'))
