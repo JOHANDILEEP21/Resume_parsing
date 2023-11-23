@@ -41,10 +41,10 @@ def main(md):
             #st.text(df)
             #resume_bytes = uploaded_file.read()
             #resume_text = remove_null_characters(uploaded_file.read().decode('utf-8'))
-        except UnicodeDecodeError:
+        except UnicodeDecodeError as uce:
             # If UTF-8 decoding fails, try decoding with 'latin-1'
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
-            #st.write(UnicodeDecodeError)
+            st.write(uce)
 
         clf = md
         #clf = pickle.load(open('clf.pkl', 'rb'))
