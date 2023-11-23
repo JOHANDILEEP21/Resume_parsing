@@ -37,6 +37,7 @@ class MultiApp:
             
         if app == 'LogIn':
             mp = main.main_page()
+            st.text(mp)
             if mp:
                 credentials, Authenticator, username, usernames = mp
                 login_page.login_page(credentials, Authenticator, username, usernames)
