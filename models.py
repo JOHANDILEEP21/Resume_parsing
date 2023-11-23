@@ -47,8 +47,8 @@ def main():  # md):
             st.write(uce)
 
         #clf = md
-        clf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/819c162ce772fcc0c8f6658247b891c4a3dda645/clf.pkl', 'rb'))
-        tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/819c162ce772fcc0c8f6658247b891c4a3dda645/tfidf.pkl', 'rb'))
+        clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
+        tfidf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
         cleaned_resume = str(cleaned_resume)
