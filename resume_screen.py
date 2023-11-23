@@ -24,7 +24,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import en_core_web_sm
+import spacy.en_core_web_sm
 
 nltk.download(['stopwords','wordnet', 'punkt'])
 nltk.download("en_core_web_lg")
