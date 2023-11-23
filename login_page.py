@@ -16,6 +16,7 @@ import models
 def ml_model():
     try:
         df = pd.read_csv(r'https://github.com/JOHANDILEEP21/Resume_parsing/blob/439539052f5014a9ffcc0d33818862cfda0104eb/UpdatedResumeDataSet.csv')
+        st.dataframe(df)
 
         df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
 
