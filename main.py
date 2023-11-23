@@ -27,9 +27,9 @@ def main_page():
         # st.write(Authenticator)
 
         email, authentication_status, username, = Authenticator.login(':green[Login]', 'main')
-        
+        st.text(authentication_status)
         info, info1 = st.columns(2)
-        st.text(username)
+        
         if username:
             if username in usernames:
                 if authentication_status:
