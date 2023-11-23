@@ -60,6 +60,7 @@ def login_page(credentials, Authenticator, username, usernames):
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
         md = ml_model()
+        st.write(md)
         start = st.checkbox('Click here to start')
         if start:
             res = resume.resume_parsing(md)
