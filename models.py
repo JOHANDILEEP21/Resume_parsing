@@ -56,7 +56,7 @@ def main():  # md):
         response = requests.get(url)
         
         # Load the pickle file from the content
-        clf = pickle.load(url, 'rb')
+        clf = pickle.load(url)
 
         #clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
         tfidf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/tfidf.pkl', 'rb'))
