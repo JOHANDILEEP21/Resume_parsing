@@ -39,7 +39,7 @@ import resume
 import spacy.cli
 #from spacy.pipeline.entity_ruler import EntityRuler
 
-#spacy.cli.download("en_core_web_sm")
+spacy.cli.download("en_core_web_lg")
 
 #import en_core_web_sm
 
