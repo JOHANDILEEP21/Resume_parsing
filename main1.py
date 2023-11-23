@@ -9,8 +9,8 @@ import pdfminer
 from pdfminer.high_level import extract_pages
 
 #st.set_page_config(page_title='UNIJACK')
-img = Image.open('https://github.com//JOHANDILEEP21//Resume_parsing//blob//6ffc07966a0b98f9534b3f128ddaae2ac6841c65//signup_page.jpg')
-st.sidebar.image(img)
+# img = Image.open('https://github.com//JOHANDILEEP21//Resume_parsing//blob//6ffc07966a0b98f9534b3f128ddaae2ac6841c65//signup_page.jpg')
+# st.sidebar.image(img)
 
 class MultiApp:
     
