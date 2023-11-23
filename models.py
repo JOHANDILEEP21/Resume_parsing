@@ -32,12 +32,12 @@ def extract_data(feed):
     return data
 
 # web app
-def main(md):
+def main(clf, tfidf):
     try:
         #st.title("Resume Screening App")
         uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf'])
         st.text(type(uploaded_file))
-        st.write(md)
+        #st.write(md)
         if uploaded_file is not None:
             try:
                 df = extract_data(uploaded_file)
@@ -50,7 +50,7 @@ def main(md):
                 #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
                 st.write(uce)
     
-            clf, tfidf = md
+            # clf, tfidf = md
             st.write(clf, tfidf)
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
