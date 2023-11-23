@@ -45,7 +45,7 @@ import spacy.cli
 #nlp = spacy.load("en_core_web_lg")
 
 ruler = nltk.add_pipe("entity_ruler")
-skill_pattern_path = r"C:\Users\johan\OneDrive\Desktop\DS Python\StreamLit\Employee_Moniter\jz_skill_patterns.jsonl"
+skill_pattern_path = r"https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/jz_skill_patterns.jsonl"
 ruler.from_disk(skill_pattern_path)
 nltk.pipe_names
 
