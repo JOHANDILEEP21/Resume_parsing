@@ -25,7 +25,7 @@ def model():
         #st.dataframe(df)
 
         tfidf = TfidfVectorizer(stop_words='english')
-        tfidf.fit(df['Resume'])
+        tfidf = tfidf.fit(df['Resume'])
         requredTaxt  = tfidf.transform(df['Resume'])
         #st.write(requredTaxt)
         X_train, X_test, y_train, y_test = train_test_split(requredTaxt, df['Category'], test_size=0.2, random_state=42)
