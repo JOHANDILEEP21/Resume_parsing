@@ -1,4 +1,4 @@
-spacy.cli.download("en_core_web_lg")
+#spacy.cli.download("en_core_web_lg")
 spacy==3.2.0
 en-core-web-lg
 streamlit
@@ -8,7 +8,7 @@ nltk
 PyPDF2
 pdfplumber
 plotly
-spacy
+#spacy
 gensim
 pyLDAvis
 jsonlines
