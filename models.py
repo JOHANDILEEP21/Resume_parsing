@@ -3,6 +3,7 @@ import pickle
 import re
 import pdfplumber
 import requests
+from io import BytesIO
 
 def remove_null_characters(text):
     return text.replace('\x00', '')
@@ -53,12 +54,10 @@ def main():  # md):
         
         # Download the pickle file
         response = requests.get(url)
-        with open('clf.pkl', 'wb') as file:
-            file.write(response.content)
         
-        # Load DataFrame from the downloaded pickle file
-        with open('clf.pkl', 'rb') as file:
-            clf = pickle.load(file)
+        # Load the pickle file from the content
+        clf = pickle.load(BytesIO(response.content))
+
         #clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
         tfidf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/tfidf.pkl', 'rb'))
         
