@@ -29,7 +29,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
 nltk.download("en_core_web_lg")
-nltk.download('en_core_web_sm')
+#nltk.download('en_core_web_sm')
 #warning
 import warnings
 warnings.filterwarnings('ignore')
@@ -39,7 +39,7 @@ import resume
 import spacy.cli
 #from spacy.pipeline.entity_ruler import EntityRuler
 
-spacy.cli.download("en_core_web_sm")
+#spacy.cli.download("en_core_web_sm")
 
 #import en_core_web_sm
 
