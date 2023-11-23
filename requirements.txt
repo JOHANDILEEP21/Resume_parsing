@@ -1,4 +1,4 @@
-/home/adminuser/venv/bin/python -m pip install --upgrade pip
+/home/adminuser/venv/lib/python3.9/site-packages/en_core_web_sm
 streamlit
 spacy
 streamlit_authenticator
