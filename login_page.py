@@ -35,11 +35,11 @@ def model():
         ypred = clf.predict(X_test)
         #st.write(accuracy_score(y_test,ypred))
 
-        pickle.dump(tfidf,open('tfidf.pkl','wb'))
-        pickle.dump(clf, open('clf.pkl', 'wb'))
+        # pickle.dump(tfidf,open('tfidf.pkl','wb'))
+        # pickle.dump(clf, open('clf.pkl', 'wb'))
         
         # Load the trained classifier
-        clf = pickle.load(open('clf.pkl', 'rb'))
+        # clf = pickle.load(open('clf.pkl', 'rb'))
         #st.write([tfidf, clf])
 
         return clf
@@ -58,10 +58,10 @@ def login_page(credentials, Authenticator, username, usernames):
         # Now you can use the columns to add content
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
-        #md = model()
+        md = model()
         start = st.checkbox('Click here to start')
         if start:
-            res = resume.resume_parsing()
+            res = resume.resume_parsing(md)
             res
         else:
             st.write('Please upload dataset for model training purposes')
