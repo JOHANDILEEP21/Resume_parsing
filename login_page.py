@@ -58,10 +58,10 @@ def login_page(credentials, Authenticator, username, usernames):
         # Now you can use the columns to add content
         with col5:
             Authenticator.logout('Log out') #, 'sidebar')
-        #md = model()
+        md = model()
         start = st.checkbox('Click here to start')
         if start:
-            res = resume.resume_parsing()
+            res = resume.resume_parsing(md)
             res
         else:
             st.write('Please upload dataset for model training purposes')
