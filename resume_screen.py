@@ -56,9 +56,9 @@ spacy.cli.download("en_core_web_sm")
 
 nlp = spacy.load("en_core_web_sm")
 
-ruler = nlp.add_pipe("entity_ruler")
-skill_pattern_path = r"https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/jz_skill_patterns.jsonl"
-ruler.from_disk(skill_pattern_path)
+# ruler = nlp.add_pipe("entity_ruler")
+# skill_pattern_path = r"https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/jz_skill_patterns.jsonl"
+# ruler.from_disk(skill_pattern_path)
 nlp.pipe_names
 
 def phone_numbers(input_resume):
