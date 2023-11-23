@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import re
 import pdfplumber
+import requests
 
 def remove_null_characters(text):
     return text.replace('\x00', '')
@@ -47,7 +48,18 @@ def main():  # md):
             st.write(uce)
 
         #clf = md
-        clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
+        # URL of the pickle file on GitHub
+        url = 'https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl'
+        
+        # Download the pickle file
+        response = requests.get(url)
+        with open('clf.pkl', 'wb') as file:
+            file.write(response.content)
+        
+        # Load DataFrame from the downloaded pickle file
+        with open('clf.pkl', 'rb') as file:
+            clf = pickle.load(file)
+        #clf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/clf.pkl', 'rb'))
         tfidf = pickle.load(open('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
