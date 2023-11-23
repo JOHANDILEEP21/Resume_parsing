@@ -32,14 +32,14 @@ def model():
 
         clf = OneVsRestClassifier(KNeighborsClassifier())
         clf.fit(X_train,y_train)
-        ypred = clf.predict(X_test)
+        #ypred = clf.predict(X_test)
         #st.write(accuracy_score(y_test,ypred))
 
-        # pickle.dump(tfidf,open('tfidf.pkl','wb'))
-        # pickle.dump(clf, open('clf.pkl', 'wb'))
+        pickle.dump(tfidf,open('tfidf.pkl','wb'))
+        pickle.dump(clf, open('clf.pkl', 'wb'))
         
         # Load the trained classifier
-        # clf = pickle.load(open('clf.pkl', 'rb'))
+        clf = pickle.load(open('clf.pkl', 'rb'))
         #st.write([tfidf, clf])
 
         return clf, tfidf
