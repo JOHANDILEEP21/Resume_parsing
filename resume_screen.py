@@ -28,7 +28,7 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
-nltk.download("en_core_web_lg")
+#nltk.download("en_core_web_lg")
 #nltk.download('en_core_web_sm')
 #warning
 import warnings
