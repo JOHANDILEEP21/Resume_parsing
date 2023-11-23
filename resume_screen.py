@@ -39,7 +39,7 @@ import resume
 import spacy.cli
 #from spacy.pipeline.entity_ruler import EntityRuler
 
-spacy.cli.download("en_core_web_lg")
+spacy.cli.download("en_core_web_sm")
 
 #import en_core_web_sm
 
@@ -54,7 +54,7 @@ spacy.cli.download("en_core_web_lg")
 #     spacy.cli.download("en_core_web_lg")
     #nlp = spacy.load("en_core_web_lg")
 
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_sm")
 
 nlp.add_pipe("entity_ruler")
 skill_pattern_path = r"https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/jz_skill_patterns.jsonl"
