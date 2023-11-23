@@ -45,7 +45,7 @@ def ml_model():
         return clf, tfidf
     
     except Exception as e:
-        st.warning(['Ingetha error'.e])
+        st.warning(f'Ingetha error{e}')
 
 def login_page(credentials, Authenticator, username, usernames):
     st.title(':red[UniJack]')
