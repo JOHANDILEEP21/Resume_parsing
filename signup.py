@@ -8,7 +8,7 @@ import sqlite3
 # signup = st.button('SignIn')
 
 def insert_user(email, username, password):
-    with sqlite3.connect('user_db.db') as conn:
+    with sqlite3.connect('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/user_db.db') as conn:
         cursor = conn.cursor()
         try:
             conn.execute("BEGIN")
@@ -23,7 +23,7 @@ def insert_user(email, username, password):
 
             
 def fetch_users():
-    conn = sqlite3.connect('user_db.db')
+    conn = sqlite3.connect('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/user_db.db')
     cursor = conn.cursor()
     g = cursor.execute('select * from users')
     users = g.fetchall()
@@ -31,7 +31,7 @@ def fetch_users():
     
     
 def get_user_emails():
-    conn = sqlite3.connect('user_db.db')
+    conn = sqlite3.connect('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/user_db.db')
     cursor = conn.cursor()
     g = cursor.execute('select * from users')
     data = g.fetchall()
@@ -41,7 +41,7 @@ def get_user_emails():
     return emails
 
 def get_usernames():
-    conn = sqlite3.connect('user_db.db')
+    conn = sqlite3.connect('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/user_db.db')
     cursor = conn.cursor()
     g = cursor.execute('select * from users')
     data = g.fetchall()
@@ -63,7 +63,7 @@ def validate_username(username):
     return False
     
 def sign_up():
-    conn = sqlite3.connect('user_db.db')
+    conn = sqlite3.connect('https://raw.githubusercontent.com/JOHANDILEEP21/Resume_parsing/main/user_db.db')
     cursor = conn.cursor()
     create_table_sql = '''
     CREATE TABLE IF NOT EXISTS users (
