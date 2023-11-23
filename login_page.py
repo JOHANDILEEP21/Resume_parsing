@@ -22,7 +22,7 @@ def model():
         le = LabelEncoder()
         le.fit(df['Category'])
         df['Category'] = le.transform(df['Category'])
-        #st.dataframe(df)
+        st.dataframe(df)
 
         tfidf = TfidfVectorizer(stop_words='english')
         tfidf = tfidf.fit(df['Resume'])
@@ -45,7 +45,7 @@ def model():
         return clf, tfidf
     
     except Exception as e:
-        st.text(e)
+        st.warning(e)
 
 def login_page(credentials, Authenticator, username, usernames):
     st.title(':red[UniJack]')
