@@ -50,7 +50,7 @@ def main(md):
 
         clf = md
         #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
-        tfidf = pickle.load('tfidf.pkl')
+        tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
         
         cleaned_resume = clean_resume(df)
         cleaned_resume = str(cleaned_resume)
