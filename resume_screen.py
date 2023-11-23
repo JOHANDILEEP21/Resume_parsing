@@ -40,14 +40,14 @@ try:
     nlp = spacy.load("en_core_web_lg")
 except OSError:
     spacy.cli.download("en_core_web_lg")
-    nlp = spacy.load("en_core_web_lg")
+    #nlp = spacy.load("en_core_web_lg")
 
 #nlp = spacy.load("en_core_web_lg")
 
-ruler = nlp.add_pipe("entity_ruler")
+ruler = nltk.add_pipe("entity_ruler")
 skill_pattern_path = r"C:\Users\johan\OneDrive\Desktop\DS Python\StreamLit\Employee_Moniter\jz_skill_patterns.jsonl"
 ruler.from_disk(skill_pattern_path)
-nlp.pipe_names
+nltk.pipe_names
 
 def phone_numbers(input_resume):
     # Regular expression pattern for matching mobile numbers
