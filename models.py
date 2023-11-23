@@ -30,7 +30,7 @@ def extract_data(feed):
     return data
 
 # web app
-def main(md):
+def main():  # md):
     #st.title("Resume Screening App")
     uploaded_file = st.file_uploader('Upload Resume', type='pdf')
     
