@@ -25,7 +25,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 nltk.download(['stopwords','wordnet'])
-#nltk.download("en_core_web_lg")
+nltk.download("en_core_web_lg")
 #warning
 import warnings
 warnings.filterwarnings('ignore')
