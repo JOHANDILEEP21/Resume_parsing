@@ -21,7 +21,7 @@ def main_page():
 
         for index in range(len(emails)):
             credentials['usernames'][usernames[index]] = {'name':emails[index], 'password':passwords[index]}
-        #st.write(credentials)
+        st.write(credentials)
 
         Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit',key='abcdef', cookie_expiry_days=4)
 
