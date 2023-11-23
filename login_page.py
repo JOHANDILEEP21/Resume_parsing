@@ -39,8 +39,8 @@ def model():
         pickle.dump(clf, open('clf.pkl', 'wb'))
         
         # Load the trained classifier
-        clf = pickle.load(open('clf.pkl', 'rb'))
-        #st.write([tfidf, clf])
+        # clf = pickle.load(open('clf.pkl', 'rb'))
+        st.write([tfidf, clf])
 
         return clf, tfidf
     
