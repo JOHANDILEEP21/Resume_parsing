@@ -46,9 +46,9 @@ def main(md):
             #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
             #st.write(UnicodeDecodeError)
 
-        tfidf, clf = md
+        clf = md
         #clf = pickle.load(open('clf.pkl', 'rb'))
-        #tfidf = pickle.load(open('tfidf.pkl', 'rb'))
+        tfidf = pickle.load(open('tfidf.pkl', 'rb'))
         
         cleaned_resume = clean_resume(df)
         cleaned_resume = str(cleaned_resume)
