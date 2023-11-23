@@ -37,11 +37,11 @@ import locale
 locale.getpreferredencoding = lambda: "UTF-8"
 import resume
 import spacy.cli
-from spacy.pipeline.entity_ruler import EntityRuler
+#from spacy.pipeline.entity_ruler import EntityRuler
 
 spacy.cli.download("en_core_web_sm")
 
-#import en_core_web_sm
+import en_core_web_sm
 
 nlp = en_core_web_sm.load()
 # Create an EntityRuler
