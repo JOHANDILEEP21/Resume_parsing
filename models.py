@@ -50,6 +50,7 @@ def main(md):
                 st.write(uce)
     
             clf, tfidf = md
+            st.write(clf, tfidf)
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
             
