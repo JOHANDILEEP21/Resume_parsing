@@ -33,7 +33,8 @@ def resume_parsing():
 
             req_skills = required_skills.lower().split(", ")
             #st.text(['Required Skills: ', req_skills])
-            resume_skills = resume_screen.get_skills(input_resume.lower())  #unique_skills(get_skills(input_resume.lower()))
+            # resume_skills = resume_screen.get_skills(input_resume.lower())  
+            resume_skills = resume_screen.unique_skills(get_skills(input_resume.lower()))
             st.text(resume_skills)
             resume_skills = set(resume_skills)
             #st.text(resume_skills)
