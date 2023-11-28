@@ -16,7 +16,7 @@ import models
 def ml_model():
     try:
         df = pd.read_csv('UpdatedResumeDataSet.csv')
-        st.dataframe(df)
+        #st.dataframe(df)
         
         df['Resume'] = df['Resume'].apply(lambda x: models.clean_resume(x))
         
@@ -41,7 +41,7 @@ def ml_model():
         
         # Load the trained classifier
         # clf = pickle.load(open('clf.pkl', 'rb'))
-        st.write([tfidf, clf])
+        #st.write([tfidf, clf])
         
         return clf, tfidf
 
