@@ -18,10 +18,10 @@ def resume_parsing():
         #st.text(pos)
 
         mdl = models.main()
-        #st.write(mdl)
+        st.write(mdl)
 
         resume_text, mdd = mdl
-        #st.text(resume_text)
+        st.text(resume_text)
         if mdd:
             input_resume = resume_text
             input_resume = ''.join(input_resume)
