@@ -18,10 +18,10 @@ def resume_parsing():
         #st.text(pos)
 
         mdl = models.main()
-        st.write(mdl)
+        # st.write(mdl)
 
         resume_text, mdd = mdl
-        st.text(resume_text)
+        # st.text(resume_text)
         if mdd:
             input_resume = resume_text
             input_resume = ''.join(input_resume)
@@ -32,16 +32,16 @@ def resume_parsing():
             #input_skills = "Data Science, Data Analysis, Database, SQL, Machine Learning, tableau, data mining, pandas, numpy, nlp, python, mongodb"
 
             req_skills = required_skills.lower().split(", ")
-            #st.text(['Required Skills: ', req_skills])
+            st.text(['Required Skills: ', req_skills])
             resume_skills = resume_screen.get_skills(input_resume.lower())  #unique_skills(get_skills(input_resume.lower()))
             resume_skills = set(resume_skills)
-            #st.text(resume_skills)
+            st.text(resume_skills)
             score = 0
             for x in req_skills:
                 if x in resume_skills:
                     score += 1
             req_skills_len = len(req_skills)
-            #st.text([req_skills_len, score])
+            st.text([req_skills_len, score])
             match = round(score / req_skills_len * 100, 1)
             #st.text(match)
             st.text(f"The current Resume is {match}% matched to your requirements")
