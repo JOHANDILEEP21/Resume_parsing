@@ -32,7 +32,7 @@ def extract_data(feed):
     return data
 
 # web app
-def main(md):
+def main():
     try:
         #st.title("Resume Screening App")
         uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf'])
@@ -49,8 +49,16 @@ def main(md):
                 # If UTF-8 decoding fails, try decoding with 'latin-1'
                 #resume_text = remove_null_characters(uploaded_file.read().decode('latin-1'))
                 st.write(uce)
+
+            zip_file_path = 'clf.zip'
+            pickle_file_name = 'clf.pkl'
     
-            clf, tfidf = md
+            with zipfile.ZipFile(zip_file_path, 'r') as zip_file:
+                with zip_file.open(pickle_file_name) as pickle_file:
+                    # Load the pickled data
+                    clf = pickle.load(pickle_file)
+            tfidf = pickle.load(open('tfidf.pkl', 'rb'))
+            #clf, tfidf = md
             #st.write(clf, tfidf)
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
