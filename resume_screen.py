@@ -112,14 +112,14 @@ def extract_email(email):
         
 def get_skills(text):
     doc = nlp(text)
-    st.text(doc)
+    # st.text(doc)
     myset = []
     subset = []
     for ent in doc.ents:
         if ent.label_ == "SKILL":
             subset.append(ent.text)
     myset.append(subset)
-    st.text([subset, myset])
+    # st.text([subset, myset])
     return subset
 
 def unique_skills(x):
