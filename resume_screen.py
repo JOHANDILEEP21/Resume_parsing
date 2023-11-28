@@ -120,7 +120,6 @@ def get_skills(text):
         if ent.label_ == "SKILL":
             subset.append(ent.text)
     myset.append(subset)
-    # return subset
     st.text([subset, myset])
     return subset
 
