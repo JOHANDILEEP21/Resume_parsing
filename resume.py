@@ -24,6 +24,7 @@ def resume_parsing():
         # st.text(resume_text)
         if mdd:
             input_resume = resume_text
+            st.text(input_resume)
             input_resume = ''.join(input_resume)
 
             contact_info, resume_skills = resume_screen.parse_resume(input_resume)
