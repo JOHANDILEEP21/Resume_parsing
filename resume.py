@@ -28,7 +28,7 @@ def resume_parsing():
             input_resume = ''.join(input_resume)
             
             contact_info, resume_skills = resume_screen.parse_resume(input_resume)
-            resume_skills = str(resume_skills)
+            # resume_skills = str(resume_skills)
             
             required_skills = st.text_input('Enter the skills that you need')
             #input_skills = "Data Science, Data Analysis, Database, SQL, Machine Learning, tableau, data mining, pandas, numpy, nlp, python, mongodb"
@@ -36,7 +36,8 @@ def resume_parsing():
             req_skills = required_skills.lower().split(", ")
             #st.text(['Required Skills: ', req_skills])
             # resume_skills = resume_screen.get_skills(input_resume.lower())  
-            resume_skills = resume_screen.unique_skills(get_skills(resume_skills.lower()))
+            # resume_skills = resume_screen.unique_skills(get_skills(resume_skills.lower()))
+            resume_skills = [x if i in req_skills for i in resume_skills.lower()]
             st.text(resume_skills)
             resume_skills = set(resume_skills)
             #st.text(resume_skills)
