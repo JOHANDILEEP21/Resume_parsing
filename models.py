@@ -4,6 +4,7 @@ import re
 import pdfplumber
 import requests
 from io import BytesIO
+import zipfile
 
 def remove_null_characters(text):
     return text.replace('\x00', '')
