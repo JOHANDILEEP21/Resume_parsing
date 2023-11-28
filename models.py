@@ -36,7 +36,7 @@ def main(md):
     try:
         #st.title("Resume Screening App")
         uploaded_file = st.file_uploader('Upload Resume', type=['txt','pdf'])
-        st.text(type(uploaded_file))
+        #st.text(type(uploaded_file))
         #st.write(md)
         if uploaded_file is not None:
             try:
@@ -51,7 +51,7 @@ def main(md):
                 st.write(uce)
     
             clf, tfidf = md
-            st.write(clf, tfidf)
+            #st.write(clf, tfidf)
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl', 'rb'))
             #tfidf = pickle.load(open('https://github.com/JOHANDILEEP21/Resume_parsing/blob/main/tfidf.pkl'))
             
