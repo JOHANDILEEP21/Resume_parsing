@@ -23,7 +23,7 @@ def main_page():
             credentials['usernames'][usernames[index]] = {'name':emails[index], 'password':passwords[index]}
         #st.write(credentials)
 
-        Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit',key='abcdef', cookie_expiry_days=4)
+        Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit',key='abcdef', cookie_expiry_days=1)
         # st.write(Authenticator)
 
         email, authentication_status, username, = Authenticator.login(':green[Login]', 'main')
