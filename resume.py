@@ -46,7 +46,7 @@ def resume_parsing():
                 if x in resume_skills:
                     score += 1
             req_skills_len = len(req_skills)
-            st.text([req_skills_len, score])
+            # st.text([req_skills_len, score])
             match = round(score / req_skills_len * 100, 1)
             #st.text(match)
             st.text(f"The current Resume is {match}% matched to your requirements")
