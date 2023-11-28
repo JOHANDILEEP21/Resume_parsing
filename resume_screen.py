@@ -115,8 +115,8 @@ def get_skills(text):
     st.text(doc)
     myset = []
     subset = []
-    for ent in doc.ents:
-        if ent.label_ == "SKILL":
+    for ent in doc:
+        if ent == "SKILL":
             subset.append(ent.text)
     myset.append(subset)
     st.text([subset, myset])
