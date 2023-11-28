@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 import models
+from resume_screen import get_skills
 import resume_screen
 
 def resume_parsing():
