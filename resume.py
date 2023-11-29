@@ -55,7 +55,7 @@ def resume_parsing():
             st.warning('Please Check your code')
     
     except Exception as e:
-        st.warning(f'Please feed the above credentials {e}')
+        st.warning(f'Please feed the above credentials')
 
 #resume_parsing()
 
