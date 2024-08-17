@@ -14,8 +14,8 @@ from pdfminer.high_level import extract_pages
 
 class MultiApp:
     
-    def __init__(self):
-        self.apps = []
+    # def __init__(self):
+    #     self.apps = []
         
     def add_app(self, title, function):
         self.apps.append({
